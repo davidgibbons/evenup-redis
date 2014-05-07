@@ -60,11 +60,4 @@ slowlog-log-slower-than <%= scope.lookupvar('redis::config::slowlog_log_slower_t
 slowlog-max-len <%= scope.lookupvar('redis::config::slowlog_max_len') %>
 
 # Advanced Config
-hash-max-zipmap-entries 512
-hash-max-zipmap-value 64
-list-max-ziplist-entries 512
-list-max-ziplist-value 64
-set-max-intset-entries 512
-zset-max-ziplist-entries 128
-zset-max-ziplist-value 64
 activerehashing yes
