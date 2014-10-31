@@ -17,9 +17,11 @@ class redis::service (
 
   service {
     'redis':
-      ensure  => running,
-      enable  => true,
-      require => Package['redis'],
+      ensure     => running,
+      enable     => true,
+      require    => Package['redis'],
+      hasrestart => true,
+      restart    => '/bin/true',
   }
 
 }
